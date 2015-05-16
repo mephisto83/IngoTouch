@@ -1,0 +1,23 @@
+﻿<div class="meph-view meph-view-remove">
+    <panel cls="meph-panel-basic" mephid="panel">
+        <header>Panel Header</header>
+        <panelbody>
+            <drawingsurface height="v$.height" width="v$.width" mephid="surface">Panel Body</drawingsurface>
+        </panelbody>
+        <panelfooter>
+            <i class="fa fa-cog fa-2x" meph-event-click="v$.openMenu"></i>
+        </panelfooter>
+    </panel>
+    <panel cls="meph-panel-basic surface-menu" mephid="menu">
+        <header>Menu</header>
+        <panelbody>
+            Options
+            <hr />
+            <color labeltext="Color"></color>
+            <range min="0" max="30" step=".1" labeltext="Stroke Width"></range>
+            <range min="0" max="30" step=".1" labeltext="Line Width"></range>
+            <range min="0" max="30" step=".1" labeltext="Miter Limit"></range>
+            <range min="0" max="30" step=".1" labeltext="Shadow Blur"></range>
+        </panelbody>
+    </panel>
+</div>

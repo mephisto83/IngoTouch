@@ -1,0 +1,16 @@
+﻿{
+    "views": [
+        {
+            "viewId": "touchhome",
+            "view": "Touch.main.view.Main",
+            "singleton": true,
+            "namespace": "Touch",
+            "path": "/touch"
+        },
+        {
+            "viewId": "BUILD_MANAGER",
+            "view": "MEPH.build.view.BuildManager",
+            "path": "/build/manager"
+        }
+    ]
+}
