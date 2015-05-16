@@ -2621,10 +2621,6 @@
 [mephplatform] .meph-panel {
   padding: 0;
 }
-/* line 13, ../sass/connection-default/_templates.scss */
-[mephplatform] .touch-menu-template.listitem.list-group-item {
-  color: black;
-}
 
 /* line 47, ../sass/ingo-touch-debug.scss */
 [mephplatform] {
@@ -2651,4 +2647,9 @@
   top: 0px;
   z-index: 1000001;
   left: 0px;
+}
+
+/* line 72, ../sass/ingo-touch-debug.scss */
+.touch-menu-template.listitem.list-group-item {
+  color: black;
 }

@@ -2,10 +2,20 @@
     <panel cls="meph-panel-basic" mephid="panel">
         <header>Panel Header</header>
         <panelbody>
-            <drawingsurface height="v$.height" width="v$.width" mephid="surface">Panel Body</drawingsurface>
+            <drawingsurface height="v$.height"
+                            meph-data-strokewidth="v$.strokeWidtdh"
+                            meph-data-linewidth="v$.lineWidth"
+                            meph-data-miterlimit="v$.miterLimit"
+                            meph-data-shadowblur="v$.shadowBlur"
+                            meph-data-shadowcolor="v$.shadowColor"
+                            meph-data-color="v$.color"
+                            meph-data-width="v$.width"
+                            mephid="surface">Panel Body</drawingsurface>
         </panelbody>
         <panelfooter>
-            <i class="fa fa-cog fa-2x" meph-event-click="v$.openMenu"></i>
+            <mephbutton meph-event-click="v$.openMenu"><i class="fa fa-cog fa-2x"></i></mephbutton>
+            <mephbutton meph-event-click="v$.dropImage"><i class="fa fa-thumb-tack fa-2x"></i></mephbutton>
+            <mephbutton meph-event-click="v$.clear"><i class="fa fa-eraser fa-2x"></i></mephbutton>
         </panelfooter>
     </panel>
     <panel cls="meph-panel-basic surface-menu" mephid="menu">
@@ -13,11 +23,12 @@
         <panelbody>
             Options
             <hr />
-            <color labeltext="Color"></color>
-            <range min="0" max="30" step=".1" labeltext="Stroke Width"></range>
-            <range min="0" max="30" step=".1" labeltext="Line Width"></range>
-            <range min="0" max="30" step=".1" labeltext="Miter Limit"></range>
-            <range min="0" max="30" step=".1" labeltext="Shadow Blur"></range>
+            <color value="v$.color" labeltext="Color"></color>
+            <range min="0" max="30" step=".1" value="v$.strokeWidth" labeltext="Stroke Width"></range>
+            <range min="0" max="30" step=".1" value="v$.lineWidth" labeltext="Line Width"></range>
+            <range min="0" max="30" step=".1" value="v$.miterLimit" labeltext="Miter Limit"></range>
+            <color value="v$.shadowColor" labeltext="Shadow Color"></color>
+            <range min="0" max="30" step=".1" value="v$.shadowBlur" labeltext="Shadow Blur"></range>
         </panelbody>
     </panel>
 </div>
